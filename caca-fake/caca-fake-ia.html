@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caça Fake - Desafio IA</title>
+    <title>Caça Fake - Desafio IA | Olhar Crítico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
     <style>
         :root {
             --primary: #ff4757;
@@ -108,7 +113,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
             opacity: 0;
             transition: var(--transition);
         }
@@ -254,8 +259,8 @@
             height: auto;
             object-fit: contain;
             transition: opacity 0.5s ease, transform 0.5s ease;
-       
-}
+
+        }
 
         .news-image:hover {
             transform: scale(1.02);
@@ -344,7 +349,7 @@
             .game-options {
                 grid-template-columns: 1fr;
             }
-            
+
             .game-header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -376,7 +381,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: 0.5s;
         }
 
@@ -519,7 +524,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
             opacity: 0;
             transition: var(--transition);
         }
@@ -653,36 +658,95 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-5px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(5px);
+            }
         }
 
         .pulse {
@@ -808,6 +872,7 @@
                 transform: translateY(0) rotate(0deg);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(100vh) rotate(720deg);
                 opacity: 0;
@@ -844,12 +909,14 @@
         }
 
         :root {
-        --phase1: #ff7f50;  /* Cor da Fase 1 */
-        --phase2: #4682b4;  /* Cor da Fase 2 */
-        /* Mantenha as outras variáveis existentes */
+            --phase1: #ff7f50;
+            /* Cor da Fase 1 */
+            --phase2: #4682b4;
+            /* Cor da Fase 2 */
+            /* Mantenha as outras variáveis existentes */
         }
 
-                /* Modal para imagem ampliada */
+        /* Modal para imagem ampliada */
         .image-modal {
             display: none;
             position: fixed;
@@ -898,20 +965,21 @@
             cursor: pointer;
             /* Mantenha as outras propriedades existentes */
         }
-      
-      /* Cor do título (h3) nos botões */
-      .mode-btn h3 {
-          color: #FF5733; /* Substitua pela cor desejada */
-      }
 
-      /* Cor do texto de descrição (p) nos botões */
-      .mode-btn p {
-          color: #A0A0A0; /* Substitua pela cor desejada */
-      }
+        /* Cor do título (h3) nos botões */
+        .mode-btn h3 {
+            color: #FF5733;
+            /* Substitua pela cor desejada */
+        }
 
-
+        /* Cor do texto de descrição (p) nos botões */
+        .mode-btn p {
+            color: #A0A0A0;
+            /* Substitua pela cor desejada */
+        }
     </style>
 </head>
+
 <body>
     <div class="particles" id="particles"></div>
     <div class="container">
@@ -919,7 +987,8 @@
         <div class="screen active" id="startScreen">
             <header>
                 <h1 style="color: var(--primary)">DESAFIO IA</h1>
-                <p class="subtitle">Você consegue identificar imagens e notícias geradas por inteligência artificial? Teste suas habilidades neste desafio contra a máquina!</p>
+                <p class="subtitle">Você consegue identificar imagens e notícias geradas por inteligência artificial?
+                    Teste suas habilidades neste desafio contra a máquina!</p>
             </header>
 
             <div class="mode-selector">
@@ -934,7 +1003,7 @@
                     <p>1 minuto para desafiar seus reflexos (+5s por acerto)</p>
                 </button>
             </div>
-            
+
             <button class="nav-btn pulse" id="startBtn" onclick="startGame()" style="display: none; margin: 0 auto;">
                 <i class="fas fa-play"></i> COMEÇAR JOGO
             </button>
@@ -949,7 +1018,8 @@
             </div>
             <h2 class="phase-title" style="color: var(--phase1)">FASE 1: IMAGEM REAL OU IMAGEM DE IA?</h2>
             <p class="phase-description">
-                Identifique se as imagens são reais ou geradas por Inteligência Artificial. Esta fase ajuda a desenvolver a atenção para imagens potencialmente enganadoras, criadas através de IA. 
+                Identifique se as imagens são reais ou geradas por Inteligência Artificial. Esta fase ajuda a
+                desenvolver a atenção para imagens potencialmente enganadoras, criadas através de IA.
             </p>
             <button class="nav-btn" onclick="startPhase('phase1')" style="background-color: var(--phase1)">
                 INICIAR FASE 1
@@ -963,7 +1033,8 @@
             </div>
             <h2 class="phase-title" style="color: var(--phase2)">FASE 2: DESAFIO NOTÍCIA IA</h2>
             <p class="phase-description">
-                Agora o desafio aumenta! Identifique se estas notícias foram geradas por Inteligência Artificial ou se são notícias reais retiradas do Arquivo.pt.
+                Agora o desafio aumenta! Identifique se estas notícias foram geradas por Inteligência Artificial ou se
+                são notícias reais retiradas do Arquivo.pt.
             </p>
             <button class="nav-btn" onclick="startPhase('phase2')" style="background-color: var(--phase2)">
                 INICIAR FASE 2
@@ -977,9 +1048,11 @@
             </div>
             <h2 class="phase-title" style="color: var(--phase3)">DESAFIO IA</h2>
             <p class="phase-description">
-                O teste final! Identifique imagens geradas por inteligência artificial versus fotografias reais. Preste atenção nos detalhes que revelam a origem das imagens.
+                O teste final! Identifique imagens geradas por inteligência artificial versus fotografias reais. Preste
+                atenção nos detalhes que revelam a origem das imagens.
             </p>
-            <button class="nav-btn pulse" onclick="startPhase('phase3')" style="background-color: var(--phase3); color: #333;">
+            <button class="nav-btn pulse" onclick="startPhase('phase3')"
+                style="background-color: var(--phase3); color: #333;">
                 <i class="fas fa-play"></i> INICIAR DESAFIO
             </button>
         </div>
@@ -1001,7 +1074,7 @@
                         <i class="fas fa-spinner fa-spin fa-2x"></i>
                     </div>
                 </div>
-                
+
                 <div class="options-container">
                     <div class="game-options">
                         <button class="option-btn" onclick="selectOption(false)" id="optionTrue">
@@ -1025,7 +1098,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="nav-buttons">
                 <button class="nav-btn" id="prevBtn" onclick="prevQuestion()" disabled>
                     <i class="fas fa-arrow-left"></i> ANTERIOR
@@ -1042,19 +1115,19 @@
                 <h2 class="results-title" style="color: var(--primary)">RESULTADO FINAL</h2>
                 <div class="score-display" id="scoreDisplay">0 acertos de 0 (0%)</div>
                 <div class="result-message" id="resultMessage"></div>
-                
+
                 <!-- Phase 1 Results -->
                 <div class="phase-results phase1-results" id="phase1Results">
                     <h3><i class="fas fa-images"></i> FASE 1: IMAGEM REAL OU IMAGEM DE IA?</h3>
                     <div id="answersDetails1"></div>
                 </div>
-                
+
                 <!-- Phase 2 Results -->
                 <div class="phase-results phase2-results" id="phase2Results">
                     <h3><i class="fas fa-robot"></i> FASE 2: DESAFIO NOTÍCIA IA</h3>
                     <div id="answersDetails2"></div>
                 </div>
-                
+
                 <div class="nav-buttons" style="margin-top: 2rem;">
                     <button class="nav-btn" onclick="restartGame()">
                         <i class="fas fa-redo"></i> JOGAR NOVAMENTE
@@ -1067,14 +1140,14 @@
         </div>
 
 
-                <!-- Modal para imagem ampliada -->
+        <!-- Modal para imagem ampliada -->
         <div id="imageModal" class="image-modal">
             <span class="close-modal">&times;</span>
             <img class="modal-content" id="modalImage">
         </div>
     </div>
 
-   
+
     <script>
         // Referências a elementos DOM
         const phaseTag = document.getElementById('phaseTag');
@@ -1102,342 +1175,342 @@
         const newsDatabase = {
             phase1: [
                 // Imagens geradas por IA (12)
-            {
-                title: "Cachorro em Jacaré",
-                image: "https://static.wixstatic.com/media/73a840_6bd25038f251472c9e526639ea7b8696~mv2.jpg",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Imagem gerada por IA - Detalhes inconsistentes"
-                    }
-                ],
-                explanation: "Gerada por LeonardoAI - Prompt: 'imagem hiper realista de um cachorro em cima de um jacaré'.",
-                tool: "LeonardoAI"
-            },
-            {
-                title: "Samurai Histórico",
-                image: "https://static.wixstatic.com/media/73a840_004c15c92489411fa4e49df5b70146a3~mv2.jpg",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Representação histórica fictícia"
-                    }
-                ],
-                explanation: "Criada por LeonardoAI - Prompt: '17h the year 1800. japan. 20 year old japanese man holding a sword'.",
-                tool: "LeonardoAI"
-            },
-            {
-                title: "Protesto em Times Square",
-                image: "https://static.wixstatic.com/media/73a840_e7623b51578c4dec8af928deefd357e9~mv2.jpg",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Cena montada digitalmente"
-                    }
-                ],
-                explanation: "Produzida por LeonardoAI - Prompt: 'fotografia aérea de um protesto gigante na times square nova york'.",
-                tool: "LeonardoAI"
-            },
-            {
-                title: "Cachorro Carente",
-                image: "https://static.wixstatic.com/media/73a840_acf932e8d84a412d84ba45ba403aad1e~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Cena emocional fabricada"
-                    }
-                ],
-                explanation: "Gerada por Sora - Prompt: 'a dog on the streets that is sad holding a sign that says I'm starving, press the heart to give me a treat'.",
-                tool: "Sora"
-            },
-            {
-                title: "San Pietro",
-                image: "https://static.wixstatic.com/media/73a840_5e714f62d80f4028a2b17ddd12b96428~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "San Pietro"
-                    }
-                ],
-                explanation: "Criada por Sora - Prompt: 'A realistic photo of San Pietro (Rome), surrounded by crowds of tourists, resolution 400px x 400px.",
-                tool: "Sora"
-            },
-            {
-                title: "Mercado",
-                image: "https://static.wixstatic.com/media/73a840_df54e49eb4dc4263bc70099d7bdf3fbf~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Supermecado vazio"
-                    }
-                ],
-                explanation: "Gerada por Sora - Prompt: 'supermarket hallway with empty shelves.",
-                tool: "Sora"
-            },
-            {
-                title: "Marx e Freud",
-                image: "https://static.wixstatic.com/media/73a840_7ae4b58c4a2f485788788aa7d8dadc2d~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Montagem histórica"
-                    }
-                ],
-                explanation: "Gerada por Sora - Prompt: 'old photo, black and white, low resolution, karl marx with sigmund freud, both are standing, looking at the camera and shaking hands, dirt paper, buildings in the background'.",
-                tool: "Sora"
-            },
-            {
-                title: "Prato de Risoto",
-                image: "https://static.wixstatic.com/media/73a840_017cdb3f06cb4550a0254556a367e4d7~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Alimento simulado"
-                    }
-                ],
-                explanation: "Gerada por Sora - Prompt: Um prato gourmet de risoto de cogumelos silvestres, servido em um prato de cerâmica rústica sobre uma mesa de madeira envelhecida. A apresentação inclui uma guarnição de folhas de tomilho fresco e lascas de parmesão, com iluminação suave e difusa, capturada em estilo fotográfico realista, foco nítido, profundidade de campo rasa.",
-                tool: "Sora"
-            },
-            {
-                title: "Natureza Morta",
-                image: "https://static.wixstatic.com/media/73a840_db0b670cf5e84dc9a77520982a1fc2e7~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Natureza morta artificial"
-                    }
-                ],
-                explanation: "Criada por Sora - Prompt: cactus em vaso.",
-                tool: "Sora"
-            },
-            {
-                title: "Torre Eiffel Anos 70",
-                image: "https://static.wixstatic.com/media/73a840_236100062da94487a180b0ae9f788bdd~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Cena histórica reconstruída"
-                    }
-                ],
-                explanation: "Gerada por Sora - Prompt: 'photo realistic image from 70-s of Eiffel tower...'.",
-                tool: "Sora"
-            },
-            {
-                title: "Gatos no Telhado",
-                image: "https://static.wixstatic.com/media/73a840_64b9407bd2b345ab89dda6a583f83722~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Cena urbana surreal"
-                    }
-                ],
-                explanation: "Produzida por Sora - Prompt: 'A rooftop of a high rise building at blue hour...'.",
-                tool: "Sora"
-            },
-            {
-                title: "Incêndio",
-                image: "https://static.wixstatic.com/media/73a840_dc8098d13f504c4a980c4a2339d6a72f~mv2.png",
-                isFake: true,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Floresta em chamas"
-                    }
-                ],
-                explanation: "Gerada por Sora - Prompt: aero photo of a rainforest burning, low resolution.",
-                tool: "Sora"
-            },
-            // Imagens reais (9)
-            {
-                title: "Fotojornalismo Real",
-                image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                isFake: false,
-                sources: [
-                    {
-                        url: "https://unsplash.com/photos/black-and-white-photo-of-people-walking-on-street-during-daytime-ZiQkhI7417A",
-                        description: "Foto jornalística autêntica tirada por um fotógrafo profissional"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Paisagem Urbana",
-                image: "https://static.wixstatic.com/media/73a840_6a95c88a1111464bbaae0c6a5be50f03~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Fotografia real de paisagem urbana"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Retrato de Rua",
-                image: "https://static.wixstatic.com/media/73a840_441f5ca5c9f84afeaa42d4c5194b5d04~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Retrato fotográfico autêntico"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Cena de Mercado",
-                image: "https://static.wixstatic.com/media/73a840_ba405de3e59540febef551359d372b44~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Documentário fotográfico"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Paisagem Natural",
-                image: "https://static.wixstatic.com/media/73a840_969acabb6a814dfcbfd6ed7f52dfe2c9~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Fotografia de natureza"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Evento Cultural",
-                image: "https://static.wixstatic.com/media/73a840_be8a6247c15c4908b1bdf016b268f79c~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Registro fotográfico de evento"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Arquitetura Histórica",
-                image: "https://static.wixstatic.com/media/73a840_36474c61914c4a3994d2942aaf6fdce9~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Fotografia arquitetônica"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Retrato em Estúdio",
-                image: "https://static.wixstatic.com/media/73a840_47cd93ebe1484cd18da4e48424cf4d08~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Retrato profissional em estúdio"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Cena Urbana Noturna",
-                image: "https://static.wixstatic.com/media/73a840_c032374eb87f4cfc8269c7911cda9d91~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Fotografia urbana noturna"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            },
-            {
-                title: "Paisagem Marinha",
-                image: "https://static.wixstatic.com/media/73a840_a52a9c475c604a4eae7b9d325b58a41b~mv2.jpg",
-                isFake: false,
-                sources: [
-                    {
-                        url: "#",
-                        description: "Fotografia de paisagem marinha"
-                    }
-                ],
-                explanation: "Retrato real.",
-                tool: "Câmera fotográfica"
-            }
-        ], 
+                {
+                    title: "Cachorro em Jacaré",
+                    image: "https://static.wixstatic.com/media/73a840_6bd25038f251472c9e526639ea7b8696~mv2.jpg",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Imagem gerada por IA - Detalhes inconsistentes"
+                        }
+                    ],
+                    explanation: "Gerada por LeonardoAI - Prompt: 'imagem hiper realista de um cachorro em cima de um jacaré'.",
+                    tool: "LeonardoAI"
+                },
+                {
+                    title: "Samurai Histórico",
+                    image: "https://static.wixstatic.com/media/73a840_004c15c92489411fa4e49df5b70146a3~mv2.jpg",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Representação histórica fictícia"
+                        }
+                    ],
+                    explanation: "Criada por LeonardoAI - Prompt: '17h the year 1800. japan. 20 year old japanese man holding a sword'.",
+                    tool: "LeonardoAI"
+                },
+                {
+                    title: "Protesto em Times Square",
+                    image: "https://static.wixstatic.com/media/73a840_e7623b51578c4dec8af928deefd357e9~mv2.jpg",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Cena montada digitalmente"
+                        }
+                    ],
+                    explanation: "Produzida por LeonardoAI - Prompt: 'fotografia aérea de um protesto gigante na times square nova york'.",
+                    tool: "LeonardoAI"
+                },
+                {
+                    title: "Cachorro Carente",
+                    image: "https://static.wixstatic.com/media/73a840_acf932e8d84a412d84ba45ba403aad1e~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Cena emocional fabricada"
+                        }
+                    ],
+                    explanation: "Gerada por Sora - Prompt: 'a dog on the streets that is sad holding a sign that says I'm starving, press the heart to give me a treat'.",
+                    tool: "Sora"
+                },
+                {
+                    title: "San Pietro",
+                    image: "https://static.wixstatic.com/media/73a840_5e714f62d80f4028a2b17ddd12b96428~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "San Pietro"
+                        }
+                    ],
+                    explanation: "Criada por Sora - Prompt: 'A realistic photo of San Pietro (Rome), surrounded by crowds of tourists, resolution 400px x 400px.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Mercado",
+                    image: "https://static.wixstatic.com/media/73a840_df54e49eb4dc4263bc70099d7bdf3fbf~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Supermecado vazio"
+                        }
+                    ],
+                    explanation: "Gerada por Sora - Prompt: 'supermarket hallway with empty shelves.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Marx e Freud",
+                    image: "https://static.wixstatic.com/media/73a840_7ae4b58c4a2f485788788aa7d8dadc2d~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Montagem histórica"
+                        }
+                    ],
+                    explanation: "Gerada por Sora - Prompt: 'old photo, black and white, low resolution, karl marx with sigmund freud, both are standing, looking at the camera and shaking hands, dirt paper, buildings in the background'.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Prato de Risoto",
+                    image: "https://static.wixstatic.com/media/73a840_017cdb3f06cb4550a0254556a367e4d7~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Alimento simulado"
+                        }
+                    ],
+                    explanation: "Gerada por Sora - Prompt: Um prato gourmet de risoto de cogumelos silvestres, servido em um prato de cerâmica rústica sobre uma mesa de madeira envelhecida. A apresentação inclui uma guarnição de folhas de tomilho fresco e lascas de parmesão, com iluminação suave e difusa, capturada em estilo fotográfico realista, foco nítido, profundidade de campo rasa.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Natureza Morta",
+                    image: "https://static.wixstatic.com/media/73a840_db0b670cf5e84dc9a77520982a1fc2e7~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Natureza morta artificial"
+                        }
+                    ],
+                    explanation: "Criada por Sora - Prompt: cactus em vaso.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Torre Eiffel Anos 70",
+                    image: "https://static.wixstatic.com/media/73a840_236100062da94487a180b0ae9f788bdd~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Cena histórica reconstruída"
+                        }
+                    ],
+                    explanation: "Gerada por Sora - Prompt: 'photo realistic image from 70-s of Eiffel tower...'.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Gatos no Telhado",
+                    image: "https://static.wixstatic.com/media/73a840_64b9407bd2b345ab89dda6a583f83722~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Cena urbana surreal"
+                        }
+                    ],
+                    explanation: "Produzida por Sora - Prompt: 'A rooftop of a high rise building at blue hour...'.",
+                    tool: "Sora"
+                },
+                {
+                    title: "Incêndio",
+                    image: "https://static.wixstatic.com/media/73a840_dc8098d13f504c4a980c4a2339d6a72f~mv2.png",
+                    isFake: true,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Floresta em chamas"
+                        }
+                    ],
+                    explanation: "Gerada por Sora - Prompt: aero photo of a rainforest burning, low resolution.",
+                    tool: "Sora"
+                },
+                // Imagens reais (9)
+                {
+                    title: "Fotojornalismo Real",
+                    image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "https://unsplash.com/photos/black-and-white-photo-of-people-walking-on-street-during-daytime-ZiQkhI7417A",
+                            description: "Foto jornalística autêntica tirada por um fotógrafo profissional"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Paisagem Urbana",
+                    image: "https://static.wixstatic.com/media/73a840_6a95c88a1111464bbaae0c6a5be50f03~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Fotografia real de paisagem urbana"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Retrato de Rua",
+                    image: "https://static.wixstatic.com/media/73a840_441f5ca5c9f84afeaa42d4c5194b5d04~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Retrato fotográfico autêntico"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Cena de Mercado",
+                    image: "https://static.wixstatic.com/media/73a840_ba405de3e59540febef551359d372b44~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Documentário fotográfico"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Paisagem Natural",
+                    image: "https://static.wixstatic.com/media/73a840_969acabb6a814dfcbfd6ed7f52dfe2c9~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Fotografia de natureza"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Evento Cultural",
+                    image: "https://static.wixstatic.com/media/73a840_be8a6247c15c4908b1bdf016b268f79c~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Registro fotográfico de evento"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Arquitetura Histórica",
+                    image: "https://static.wixstatic.com/media/73a840_36474c61914c4a3994d2942aaf6fdce9~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Fotografia arquitetônica"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Retrato em Estúdio",
+                    image: "https://static.wixstatic.com/media/73a840_47cd93ebe1484cd18da4e48424cf4d08~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Retrato profissional em estúdio"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Cena Urbana Noturna",
+                    image: "https://static.wixstatic.com/media/73a840_c032374eb87f4cfc8269c7911cda9d91~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Fotografia urbana noturna"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                },
+                {
+                    title: "Paisagem Marinha",
+                    image: "https://static.wixstatic.com/media/73a840_a52a9c475c604a4eae7b9d325b58a41b~mv2.jpg",
+                    isFake: false,
+                    sources: [
+                        {
+                            url: "#",
+                            description: "Fotografia de paisagem marinha"
+                        }
+                    ],
+                    explanation: "Retrato real.",
+                    tool: "Câmera fotográfica"
+                }
+            ],
 
-        phase2: [ // Fase 2 - IA vs Real
-        {
-            title: "Notícia 1",
-            image: "https://static.wixstatic.com/media/73a840_b0b94dc510694a169297d2f0d78c8792~mv2.png",
-            isFake: true,
-            explanation: "Noticia gerada com IA.",
-            tool: "Midjourney"
-        },
-        {
-            title: "Notícia 2",
-            image: "https://static.wixstatic.com/media/73a840_bb13d6b3eba54d879e6816457edce29f~mv2.png",
-            isFake: true,
-            explanation: "Notícia gerada por IA.",
-            tool: "Câmera DSLR"
-        },
-        {
-            title: "Notícia 3",
-            image: "https://static.wixstatic.com/media/73a840_3b7788391bc54ef789c1ee936b41ed4f~mv2.png",
-            isFake: true,
-            explanation: "Notícia gerada por IA.",
-            tool: "Câmera DSLR"
-        },
-        {
-            title: "Notícia 4",
-            image: "https://static.wixstatic.com/media/73a840_28a11c0d5bac43ce926b8b14b1aec7b4~mv2.png",
-            isFake: false,
-            explanation: "Notícia real.Fonte: https://arquivo.pt/wayback/20201229213103/https://zap.aeiou.pt/nasa-matou-macacos-unico-dia-367911",
-            tool: "Câmera DSLR"
-        },
-          {
-            title: "Notícia 5",
-            image: "https://static.wixstatic.com/media/73a840_f83b202fd4e9429fb22e3e38e099cfa2~mv2.jpg",
-            isFake: false,
-            explanation: "Notícia real. Fonte:https://arquivo.pt/wayback/20191205143448/https://observador.pt/2018/01/09/nevou-no-sahara-pela-terceira-vez-em-37-anos-as-fotos-do-fenomeno-raro/",
-            tool: "Câmera DSLR"
-        },
-               {
-            title: "Notícia 6",
-            image: "https://static.wixstatic.com/media/73a840_d6af6edd36904ef68789db5a86374be3~mv2.png",
-            isFake: false,
-            explanation: "Notícia real. Fonte:https://arquivo.pt/wayback/20171220195631/http://visao.sapo.pt/actualidade/sociedade/2017-12-16-Ilhas-de-lixo-e-plastico-podem-vir-a-ser-consideradas-pais",
-            tool: "Câmera DSLR"
-        }
-        
-        
-        // Adicione mais imagens para a fase 2
-        ]
+            phase2: [ // Fase 2 - IA vs Real
+                {
+                    title: "Notícia 1",
+                    image: "https://static.wixstatic.com/media/73a840_b0b94dc510694a169297d2f0d78c8792~mv2.png",
+                    isFake: true,
+                    explanation: "Noticia gerada com IA.",
+                    tool: "Midjourney"
+                },
+                {
+                    title: "Notícia 2",
+                    image: "https://static.wixstatic.com/media/73a840_bb13d6b3eba54d879e6816457edce29f~mv2.png",
+                    isFake: true,
+                    explanation: "Notícia gerada por IA.",
+                    tool: "Câmera DSLR"
+                },
+                {
+                    title: "Notícia 3",
+                    image: "https://static.wixstatic.com/media/73a840_3b7788391bc54ef789c1ee936b41ed4f~mv2.png",
+                    isFake: true,
+                    explanation: "Notícia gerada por IA.",
+                    tool: "Câmera DSLR"
+                },
+                {
+                    title: "Notícia 4",
+                    image: "https://static.wixstatic.com/media/73a840_28a11c0d5bac43ce926b8b14b1aec7b4~mv2.png",
+                    isFake: false,
+                    explanation: "Notícia real.Fonte: https://arquivo.pt/wayback/20201229213103/https://zap.aeiou.pt/nasa-matou-macacos-unico-dia-367911",
+                    tool: "Câmera DSLR"
+                },
+                {
+                    title: "Notícia 5",
+                    image: "https://static.wixstatic.com/media/73a840_f83b202fd4e9429fb22e3e38e099cfa2~mv2.jpg",
+                    isFake: false,
+                    explanation: "Notícia real. Fonte:https://arquivo.pt/wayback/20191205143448/https://observador.pt/2018/01/09/nevou-no-sahara-pela-terceira-vez-em-37-anos-as-fotos-do-fenomeno-raro/",
+                    tool: "Câmera DSLR"
+                },
+                {
+                    title: "Notícia 6",
+                    image: "https://static.wixstatic.com/media/73a840_d6af6edd36904ef68789db5a86374be3~mv2.png",
+                    isFake: false,
+                    explanation: "Notícia real. Fonte:https://arquivo.pt/wayback/20171220195631/http://visao.sapo.pt/actualidade/sociedade/2017-12-16-Ilhas-de-lixo-e-plastico-podem-vir-a-ser-consideradas-pais",
+                    tool: "Câmera DSLR"
+                }
+
+
+                // Adicione mais imagens para a fase 2
+            ]
 
         };
 
@@ -1456,7 +1529,7 @@
         const TOTAL_LEVELS = 10;
         const QUESTIONS_PER_LEVEL = 10;
 
-        
+
 
         // Função para alternar entre telas
         function switchScreen(screenId) {
@@ -1471,90 +1544,90 @@
         function getQuestionsForLevel(level) {
             const iaImages = newsDatabase.phase3.filter(img => img.isFake);
             const realImages = newsDatabase.phase3.filter(img => !img.isFake);
-            
+
             const iaCount = Math.floor(Math.random() * 3) + 4; // 4-6
             const realCount = 10 - iaCount;
-            
+
             const selectedIa = shuffleArray([...iaImages]).slice(0, iaCount);
             const selectedReal = shuffleArray([...realImages]).slice(0, realCount);
-            
+
             return shuffleArray([...selectedIa, ...selectedReal]);
         }
 
         // Função para iniciar uma fase
-            function startPhase(phase) {
-        currentPhase = phase;
-        currentQuestion = 0;
-        score = 0;
-        userAnswers = [];
-        hasAnswered = false;
-        
-        if (phase === 'phase1') {
-            const fakeImages = newsDatabase.phase1.filter(img => img.isFake);
-            const realImages = newsDatabase.phase1.filter(img => !img.isFake);
-            
-            const fakeCount = Math.floor(Math.random() * 3) + 4; // 4-6
-            const realCount = 10 - fakeCount;
-            
-            const selectedFakes = shuffleArray([...fakeImages]).slice(0, fakeCount);
-            const selectedReals = shuffleArray([...realImages]).slice(0, realCount);
-            
-            shuffledQuestions = shuffleArray([...selectedFakes, ...selectedReals]);
-            selectedQuestionsPhase1 = [...shuffledQuestions]; // Armazena as questões selecionadas
-            
-            phaseTag.textContent = 'FASE 1';
-            phaseTag.className = 'phase-tag phase1';
-            progressFill.className = 'progress-fill phase1';
-            optionTrue.innerHTML = '<i class="fas fa-camera"></i> IMAGEM REAL';
-            optionFalse.innerHTML = '<i class="fas fa-robot"></i> GERADA POR IA';
-        } 
-        else if (phase === 'phase2') {
-            shuffledQuestions = shuffleArray([...newsDatabase.phase2]);
-            selectedQuestionsPhase2 = [...shuffledQuestions]; // Armazena as questões selecionadas
-            
-            phaseTag.textContent = 'FASE 2';
-            phaseTag.className = 'phase-tag phase2';
-            progressFill.className = 'progress-fill phase2';
-            optionTrue.innerHTML = '<i class="fas fa-check"></i> NOTÍCIA REAL';
-            optionFalse.innerHTML = '<i class="fas fa-times"></i> GERADA POR IA';
+        function startPhase(phase) {
+            currentPhase = phase;
+            currentQuestion = 0;
+            score = 0;
+            userAnswers = [];
+            hasAnswered = false;
+
+            if (phase === 'phase1') {
+                const fakeImages = newsDatabase.phase1.filter(img => img.isFake);
+                const realImages = newsDatabase.phase1.filter(img => !img.isFake);
+
+                const fakeCount = Math.floor(Math.random() * 3) + 4; // 4-6
+                const realCount = 10 - fakeCount;
+
+                const selectedFakes = shuffleArray([...fakeImages]).slice(0, fakeCount);
+                const selectedReals = shuffleArray([...realImages]).slice(0, realCount);
+
+                shuffledQuestions = shuffleArray([...selectedFakes, ...selectedReals]);
+                selectedQuestionsPhase1 = [...shuffledQuestions]; // Armazena as questões selecionadas
+
+                phaseTag.textContent = 'FASE 1';
+                phaseTag.className = 'phase-tag phase1';
+                progressFill.className = 'progress-fill phase1';
+                optionTrue.innerHTML = '<i class="fas fa-camera"></i> IMAGEM REAL';
+                optionFalse.innerHTML = '<i class="fas fa-robot"></i> GERADA POR IA';
+            }
+            else if (phase === 'phase2') {
+                shuffledQuestions = shuffleArray([...newsDatabase.phase2]);
+                selectedQuestionsPhase2 = [...shuffledQuestions]; // Armazena as questões selecionadas
+
+                phaseTag.textContent = 'FASE 2';
+                phaseTag.className = 'phase-tag phase2';
+                progressFill.className = 'progress-fill phase2';
+                optionTrue.innerHTML = '<i class="fas fa-check"></i> NOTÍCIA REAL';
+                optionFalse.innerHTML = '<i class="fas fa-times"></i> GERADA POR IA';
+            }
+
+            switchScreen('gameScreen');
+
+            if (gameMode === 'timed') {
+                timeLeft = 60;
+                updateTimerDisplay();
+                if (timerInterval) clearInterval(timerInterval);
+                timerContainer.style.display = 'block';
+                startTimer();
+            } else {
+                timerContainer.style.display = 'none';
+            }
+
+            loadQuestion();
+            updateProgress();
         }
-        
-        switchScreen('gameScreen');
-        
-        if (gameMode === 'timed') {
-            timeLeft = 60;
-            updateTimerDisplay();
-            if (timerInterval) clearInterval(timerInterval);
-            timerContainer.style.display = 'block';
-            startTimer();
-        } else {
-            timerContainer.style.display = 'none';
-        }
-        
-        loadQuestion();
-        updateProgress();
-    }
 
         // Função principal do jogo
         function selectOption(userChoice) {
             if (hasAnswered || (gameMode === 'timed' && timeLeft <= 0)) return;
-            
+
             hasAnswered = true;
             const question = shuffledQuestions[currentQuestion];
             const isCorrect = (userChoice === question.isFake);
-            
+
             if (isCorrect) {
                 score++;
                 if (gameMode === 'timed') {
                     timeLeft += 5;
                     updateTimerDisplay();
                 }
-                
+
                 if (score % 3 === 0) {
                     createConfetti();
                 }
             }
-            
+
             // Atualiza visual dos botões
             if (userChoice) {
                 optionFalse.classList.add('selected-false');
@@ -1563,14 +1636,14 @@
                 optionTrue.classList.add('selected-true');
                 optionFalse.classList.add('selected-false');
             }
-            
+
             optionTrue.disabled = true;
             optionFalse.disabled = true;
 
 
             // Mostra feedback
-          
-            
+
+
             if (question.isFake) {
                 feedback.innerHTML = `
                     <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
@@ -1590,9 +1663,9 @@
                 `;
                 feedback.className = 'feedback feedback-correct';
             }
-            
+
             feedback.style.display = 'block';
-            
+
             // Armazena resposta do usuário
             userAnswers.push({
                 userChoice,
@@ -1602,9 +1675,9 @@
                 sources: question.sources || [],
                 tool: question.tool
             });
-            
+
             nextBtn.disabled = false;
-            
+
             // Avança automaticamente no modo cronômetro
             if (gameMode === 'timed' && timeLeft > 0) {
                 setTimeout(() => {
@@ -1619,18 +1692,18 @@
         function nextQuestion() {
             if (currentQuestion === shuffledQuestions.length - 1) {
                 phaseScores[currentPhase] = score;
-                
+
                 if (currentPhase === 'phase1') {
                     // Vai para a Fase 2 após completar a Fase 1
                     switchScreen('phase2Screen');
                     return;
                 }
-                
+
                 // Se completou a Fase 2, mostra os resultados
                 showResults();
                 return;
             }
-            
+
             currentQuestion++;
             loadQuestion();
             updateProgress();
@@ -1639,17 +1712,17 @@
         // Função para carregar questão
         function loadQuestion() {
             hasAnswered = false;
-            
+
             if (currentQuestion < shuffledQuestions.length) {
                 const question = shuffledQuestions[currentQuestion];
-                
+
                 newsImage.style.opacity = 0;
                 imageLoading.style.display = 'flex';
-                
+
                 const img = new Image();
                 img.src = question.image;
-                
-                img.onload = function() {
+
+                img.onload = function () {
                     newsImage.src = question.image;
                     newsImage.onload = () => {
                         imageLoading.style.display = 'none';
@@ -1658,25 +1731,25 @@
                         setupImageModal();
                     };
                 };
-                
-                img.onerror = function() {
+
+                img.onerror = function () {
                     newsImage.src = question.image;
                     imageLoading.style.display = 'none';
                     newsImage.style.opacity = 1;
                     // Configura o evento de clique para a nova imagem
                     setupImageModal();
                 };
-                
+
                 // Restante da função permanece igual
                 optionTrue.classList.remove('selected-true', 'selected-false');
                 optionFalse.classList.remove('selected-true', 'selected-false');
                 optionTrue.disabled = false;
                 optionFalse.disabled = false;
                 feedback.style.display = 'none';
-                
+
                 prevBtn.disabled = currentQuestion === 0;
                 nextBtn.disabled = true;
-                
+
                 if (currentQuestion === shuffledQuestions.length - 1) {
                     nextBtn.textContent = 'VER RESULTADO';
                 } else {
@@ -1688,30 +1761,30 @@
         }
 
         // Função para mostrar resultados finais
-                function showResults() {
+        function showResults() {
             if (gameMode === 'timed') {
                 clearInterval(timerInterval);
             }
-            
+
             phaseScores[currentPhase] = score;
-            
+
             // Calcular total de questões jogadas (considerando as selecionadas)
-            const totalQuestionsPlayed = 
-                (phaseScores.phase1 !== undefined ? selectedQuestionsPhase1.length : 0) + 
+            const totalQuestionsPlayed =
+                (phaseScores.phase1 !== undefined ? selectedQuestionsPhase1.length : 0) +
                 (phaseScores.phase2 !== undefined ? selectedQuestionsPhase2.length : 0);
-            
+
             // Soma os scores das fases jogadas
-            const totalScore = 
-                (phaseScores.phase1 || 0) + 
+            const totalScore =
+                (phaseScores.phase1 || 0) +
                 (phaseScores.phase2 || 0);
-            
-            const percentage = totalQuestionsPlayed > 0 
-                ? Math.round((totalScore / totalQuestionsPlayed) * 100) 
+
+            const percentage = totalQuestionsPlayed > 0
+                ? Math.round((totalScore / totalQuestionsPlayed) * 100)
                 : 0;
-            
+
             switchScreen('resultsScreen');
             scoreDisplay.textContent = `${totalScore} acertos de ${totalQuestionsPlayed} (${percentage}%)`;
-            
+
             if (percentage >= 80) {
                 resultMessage.textContent = "🏆 Excelente! Você é um verdadeiro detetive de imagens!";
                 resultMessage.style.backgroundColor = "rgba(46, 213, 115, 0.1)";
@@ -1722,7 +1795,7 @@
                 resultMessage.textContent = "🤔 Precisa praticar mais! Tente novamente para melhorar.";
                 resultMessage.style.backgroundColor = "rgba(255, 71, 87, 0.1)";
             }
-            
+
             renderPhaseResults('phase1', document.getElementById('answersDetails1'));
             renderPhaseResults('phase2', document.getElementById('answersDetails2'));
         }
@@ -1751,7 +1824,7 @@
                     const lastAnswer = userAnswers.pop();
                     if (lastAnswer.isCorrect) score--;
                 }
-                
+
                 currentQuestion--;
                 loadQuestion();
                 updateProgress();
@@ -1760,30 +1833,30 @@
 
         function renderPhaseResults(phase, container) {
             container.innerHTML = '';
-            
+
             if (!phaseScores[phase]) return;
-            
+
             const questionsToShow = phase === 'phase1' ? selectedQuestionsPhase1 : selectedQuestionsPhase2;
-            
+
             questionsToShow.forEach((q, i) => {
                 const answerDiv = document.createElement('div');
                 answerDiv.className = "answer-detail";
-                
+
                 answerDiv.innerHTML = `
                     <div class="result-item">
                         <img src="${q.image}" class="thumbnail" alt="Miniatura">
                         <div class="result-content">
                             <h4 class="news-title">${q.title}</h4>
                             <div class="answer-status ${q.isFake ? 'fake' : 'true'}">
-                                ${phase === 'phase1' 
-                                    ? (q.isFake ? '❌ GERADA POR IA' : '✅ IMAGEM REAL') 
-                                    : (q.isFake ? '❌ NOTÍCIA FALSA' : '✅ NOTÍCIA REAL')}
+                                ${phase === 'phase1'
+                        ? (q.isFake ? '❌ GERADA POR IA' : '✅ IMAGEM REAL')
+                        : (q.isFake ? '❌ NOTÍCIA FALSA' : '✅ NOTÍCIA REAL')}
                             </div>
                             <p class="explanation">${q.explanation}</p>
                         </div>
                     </div>
                 `;
-                
+
                 container.appendChild(answerDiv);
             });
         }
@@ -1810,14 +1883,14 @@
             phaseScores = { phase1: 0, phase2: 0 };
             selectedQuestionsPhase1 = [];
             selectedQuestionsPhase2 = [];
-            
+
             if (timerInterval) {
                 clearInterval(timerInterval);
                 timerInterval = null;
             }
-            
+
             switchScreen('startScreen');
-            
+
             document.querySelectorAll('.mode-btn').forEach(btn => {
                 btn.classList.remove('selected');
             });
@@ -1829,7 +1902,7 @@
             timerInterval = setInterval(() => {
                 timeLeft--;
                 updateTimerDisplay();
-                
+
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     endTimedGame();
@@ -1841,7 +1914,7 @@
             const minutes = Math.floor(timeLeft / 60);
             const seconds = timeLeft % 60;
             timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            
+
             if (timeLeft <= 10) {
                 timerElement.classList.add('pulse');
                 if (timeLeft <= 5) {
@@ -1866,17 +1939,17 @@
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 30;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
-                
+
                 const size = Math.random() * 2 + 1;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
-                
+
                 const duration = Math.random() * 20 + 10;
                 particle.style.animation = `float ${duration}s linear infinite`;
                 particlesContainer.appendChild(particle);
@@ -1886,7 +1959,7 @@
         function createConfetti() {
             const colors = ['#ff4757', '#2ed573', '#1e90ff', '#ffa502', '#9acd32'];
             const confettiCount = 100;
-            
+
             for (let i = 0; i < confettiCount; i++) {
                 const confetti = document.createElement('div');
                 confetti.classList.add('confetti');
@@ -1894,18 +1967,18 @@
                 const size = Math.random() * 10 + 5;
                 confetti.style.width = `${size}px`;
                 confetti.style.height = `${size}px`;
-                
+
                 if (Math.random() > 0.5) {
                     confetti.style.borderRadius = '50%';
                 } else {
                     confetti.style.borderRadius = '0';
                 }
-                
+
                 confetti.style.left = `${Math.random() * 100}%`;
                 const duration = Math.random() * 2 + 2;
                 confetti.style.animationDuration = `${duration}s`;
                 document.body.appendChild(confetti);
-                
+
                 setTimeout(() => {
                     confetti.remove();
                 }, duration * 1000);
@@ -1925,7 +1998,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             startScreen.classList.add('active');
             createParticles();
-            
+
             // Adiciona animação de partículas
             const style = document.createElement('style');
             style.textContent = `
@@ -1939,37 +2012,37 @@
         });
 
 
-                // Funções para o modal de imagem
+        // Funções para o modal de imagem
         function setupImageModal() {
             const modal = document.getElementById("imageModal");
             const modalImg = document.getElementById("modalImage");
             const closeModal = document.querySelector(".close-modal");
-            
+
             // Quando a imagem da notícia é clicada
-            newsImage.addEventListener('click', function() {
+            newsImage.addEventListener('click', function () {
                 if (this.src && this.src !== '') {
                     modal.style.display = "block";
                     modalImg.src = this.src;
                     document.body.style.overflow = "hidden"; // Desabilita scroll
                 }
             });
-            
+
             // Quando o botão de fechar é clicado
-            closeModal.addEventListener('click', function() {
+            closeModal.addEventListener('click', function () {
                 modal.style.display = "none";
                 document.body.style.overflow = "auto"; // Habilita scroll novamente
             });
-            
+
             // Fechar modal ao clicar fora da imagem
-            modal.addEventListener('click', function(e) {
+            modal.addEventListener('click', function (e) {
                 if (e.target === modal) {
                     modal.style.display = "none";
                     document.body.style.overflow = "auto";
                 }
             });
-            
+
             // Fechar modal com tecla ESC
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === "Escape" && modal.style.display === "block") {
                     modal.style.display = "none";
                     document.body.style.overflow = "auto";
@@ -1982,7 +2055,7 @@
             startScreen.classList.add('active');
             createParticles();
             setupImageModal(); // Adicione esta linha
-            
+
             // Adiciona animação de partículas
             const style = document.createElement('style');
             style.textContent = `
@@ -1995,5 +2068,17 @@
             document.head.appendChild(style);
         });
     </script>
+    <!-- Back Button -->
+    <a href="../pages/caca-fakes/index.html" class="back-button" title="Voltar">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
+
 </html>

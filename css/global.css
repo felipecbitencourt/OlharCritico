@@ -1,0 +1,261 @@
+/*
+ * OLHAR CRÍTICO - Global Styles
+ * Sistema de design unificado para o site
+ */
+
+/* ==========================================
+   CSS CUSTOM PROPERTIES (Variables)
+   ========================================== */
+
+:root {
+    /* Cores principais */
+    --vermelho: #ff0000;
+    --vermelho-escuro: #cc0000;
+    --vermelho-claro: #ff3333;
+    --primary: #ff4757;
+    
+    /* Cores de fundo */
+    --preto: #111;
+    --preto-claro: #1a1a1a;
+    --background: #1e272e;
+    --card-bg: #2f3542;
+    
+    /* Cores de texto */
+    --text: #f1f2f6;
+    --text-muted: #aaa;
+    --cinza-escuro: #333;
+    --cinza-medio: #666;
+    --cinza-claro: #ccc;
+    --branco: #fff;
+    
+    /* Cores de destaque */
+    --destaque: #ffcc00;
+    --correct: #2ed573;
+    --incorrect: #ff6b81;
+    
+    /* Sombras */
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    --box-shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.4);
+    --box-shadow-card: 0 5px 15px rgba(0, 0, 0, 0.08);
+    
+    /* Transições */
+    --transition: all 0.3s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-pill: 50px;
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    color: var(--primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--primary);
+}
+
+h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
+    font-style: italic;
+    position: relative;
+    padding: 0 2rem;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary);
+    opacity: 0.5;
+    position: absolute;
+}
+
+blockquote::before {
+    top: -10px;
+    left: 0;
+}
+
+blockquote::after {
+    bottom: -20px;
+    right: 0;
+}
+
+/* ==========================================
+   LAYOUT CONTAINERS
+   ========================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    position: relative;
+}
+
+/* Section Variations */
+.section-dark {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.section-accent {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+.section-pattern {
+    background-color: var(--branco);
+    background-image: radial-gradient(var(--cinza-claro) 1px, transparent 1px);
+    background-size: 15px 15px;
+    color: var(--preto);
+}
+
+/* ==========================================
+   SECTION TITLES
+   ========================================== */
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+}
+
+.section-dark .section-title {
+    color: var(--branco);
+}
+
+.section-dark .section-title::after {
+    background: var(--destaque);
+}
+
+/* ==========================================
+   GRIDS
+   ========================================== */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .content-grid,
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

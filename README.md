@@ -112,8 +112,33 @@ O website é composto por 17 páginas, com destaque para 6 principais:
 
 ## ⚙ Informações Técnicas
 
+### Estrutura do Projeto:
+```
+OlharCritico/
+├── index.html              # Página principal
+├── css/                    # Estilos
+│   ├── global.css          # Variáveis e estilos base
+│   ├── components.css      # Componentes reutilizáveis
+│   └── utilities.css       # Classes utilitárias
+├── js/                     # Scripts
+│   ├── main.js             # Funcionalidades principais
+│   └── dados-charts.js     # Visualizações com Chart.js
+├── assets/                 # Imagens, vídeos e ícones
+├── o-que-e-fake/           # Seção educativa sobre fake news
+├── portugal/               # Análise histórica portuguesa
+├── dados/                  # Painéis de visualização de dados
+├── caca-fake/              # Jogos educativos
+├── verificacao/            # Protocolo de verificação
+├── acervo/                 # Repositório de referências
+├── sobre/                  # Página sobre o projeto
+└── busca-API/              # Scripts Python para API
+```
+
 ### Tecnologias Utilizadas:
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Visualização de Dados**: [Chart.js](https://www.chartjs.org/)
 - **API**: [Arquivo.pt API](https://github.com/arquivo/pwa-technologies/wiki/Arquivo.pt-API)
+- **Scripts de Coleta**: Python 3
 - **Ferramentas de IA**: ChatGPT, DeepSeek, Leonardo.ai
 
 ### Limitações:

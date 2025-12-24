@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprofundar | Olhar Crítico</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
     <style>
         /* Reset e Fontes */
         * {
@@ -21,7 +27,9 @@
             font-family: 'Raleway', sans-serif;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: 1px;
         }
@@ -114,7 +122,8 @@
             transition: all 0.3s;
         }
 
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover,
+        .filter-btn.active {
             background: #ff0000;
         }
 
@@ -369,8 +378,15 @@
 
         /* Animações */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsividade */
@@ -390,313 +406,335 @@
         }
     </style>
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Aprofundar</h1>
-            <p>Artigos, livros e estudos para entender as fake news além da superfície</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="" class="logo-icon">
+                <span>OLHAR CRÍTICO</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="../pages/o-que-e-fake/index.html" class="nav-link">O que é Fake</a>
+                <a href="../pages/dados/index.html" class="nav-link">Dados</a>
+                <a href="../pages/verificacao/index.html" class="nav-link">Verificação</a>
+                <a href="../pages/caca-fakes/index.html" class="nav-link">Caça-Fakes</a>
+                <a href="../pages/portugal/index.html" class="nav-link">Portugal</a>
+                <a href="../pages/acervo/index.html" class="nav-link active">Acervo</a>
+                <a href="../pages/sobre/index.html" class="nav-link">Sobre</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
         </div>
-    </section>
+    </header>
 
-    <!-- Filtros -->
-    <div class="filters">
-        <button class="filter-btn active" data-filter="all">Tudo</button>
-        <button class="filter-btn" data-filter="reading">Leitura</button>
-        <button class="filter-btn" data-filter="video">Vídeos</button>
-    </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Aprofundar</h1>
+                <p>Artigos, livros e estudos para entender as fake news além da superfície</p>
+            </div>
+        </section>
 
-    <!-- Seção de Referências -->
-    <section id="references" class="references">
-        <h2>Referências Selecionadas</h2>
-        
-        <!-- Grid de referências -->
-        <div class="reference-grid" id="reference-container">
-            <!-- Os cards serão inseridos aqui via JavaScript -->
+        <!-- Filtros -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tudo</button>
+            <button class="filter-btn" data-filter="reading">Leitura</button>
+            <button class="filter-btn" data-filter="video">Vídeos</button>
         </div>
-        
-        <!-- Paginação -->
-        <div class="pagination" id="pagination-container">
-            <button class="page-btn" id="prev-btn" disabled>Anterior</button>
-            <span id="page-info">Página 1</span>
-            <button class="page-btn" id="next-btn">Próxima</button>
-        </div>
-        
 
-    <!-- Seção de Sugestões -->
-    <section class="suggestions">
-        <div class="suggestions-content">
-            <h2>Sugira Referências</h2>
-            <p>Conhece algum conteúdo relevante que deveria estar nesta lista? Envie sua sugestão!</p>
-            <form class="suggestions-form">
-                <input type="text" placeholder="Seu nome (opcional)">
-                <input type="email" placeholder="Seu e-mail (opcional)">
-                <input type="text" placeholder="Título da referência" required>
-                <input type="text" placeholder="Tipo (livro, artigo, vídeo, etc.)" required>
-                <input type="url" placeholder="Link (se disponível)">
-                <textarea placeholder="Por que você recomenda este conteúdo?" required></textarea>
-                <button type="submit">Enviar Sugestão</button>
-            </form>
-        </div>
-    </section>
+        <!-- Seção de Referências -->
+        <section id="references" class="references">
+            <h2>Referências Selecionadas</h2>
 
-   
+            <!-- Grid de referências -->
+            <div class="reference-grid" id="reference-container">
+                <!-- Os cards serão inseridos aqui via JavaScript -->
+            </div>
 
-    <script>
-        // Dados das referências
-        const references = [
-            // Leituras
-            {
-                title: "Educação em Ciências e Fake News",
-                category: "reading",
-                type: "Artigo Acadêmico",
-                year: "ENPEC, 2021",
-                description: "Análise de como a falta de educação científica facilita a disseminação de desinformação, com foco em letramento midiático e políticas públicas.",
-                link: "https://www.editorarealize.com.br/editora/anais/enpec/2021/TRABALHO_COMPLETO_EV155_MD1_SA108_ID1340_29062021204056.pdf",
-                icon: "📄"
-            },
-            {
-                title: "Fake News: Uma Revisão Interdisciplinar",
-                category: "reading",
-                type: "Artigo",
-                year: "Brajets",
-                description: "Revisão ampla sobre deepfakes, IA geradora de texto e impactos psicológicos na propagação de desinformação.",
-                link: "https://brajets.com/brajets/article/view/790/429",
-                icon: "📄"
-            },
-            {
-                title: "Fake News e a Banalidade do Mal",
-                category: "reading",
-                type: "Artigo",
-                year: "FINOM",
-                description: "Análise do excesso de informação na era digital e sua relação com a teoria da 'banalidade do mal' de Hannah Arendt.",
-                link: "https://revistas.icesp.br/index.php/FINOM_Humanidade_Tecnologia/article/view/1709/1268",
-                icon: "📄"
-            },
-            {
-                title: "Information Disorder",
-                category: "reading",
-                type: "Relatório",
-                year: "Conselho da Europa, 2017",
-                description: "Framework para classificar desinformação em mis-information, dis-information e mal-information, com diretrizes para políticas públicas.",
-                link: "https://edoc.coe.int/en/media/11609-desordem-informacional-para-um-quadro-interdisciplinar-de-investigacao-e-elaboracao-de-politicas-publicas.html",
-                icon: "📊"
-            },
-            {
-                title: "A Fábrica de Mentiras",
-                category: "reading",
-                type: "Livro",
-                year: "Bernardo Pires",
-                description: "Investigação sobre a indústria da desinformação, com casos reais de fake news que impactaram a política global.",
-                link: "https://www.wook.pt/livro/fabrica-de-mentiras-paulo-pena/23507165?srsltid=AfmBOooeX_bSNqbEQWjxAfmAzs7ETBML7NzR19EP7ZWCRunjOKjzlwdO",
-                icon: "📚"
-            },
-            {
-                title: "The Misinformation Age",
-                category: "reading",
-                type: "Livro",
-                year: "Cailin O'Connor",
-                description: "Como as falsas crenças se espalham, explorando vieses cognitivos e dinâmicas sociais por trás das fake news.",
-                link: "https://www.amazon.com/Misinformation-Age-False-Beliefs-Spread/dp/0300234015",
-                icon: "📚"
-            },
-            {
-                title: "Pós-Verdade",
-                category: "reading",
-                type: "Livro",
-                year: "Matthew d'Ancona",
-                description: "Análise sobre como a emoção se tornou mais importante que os fatos na política contemporânea.",
-                link: "https://books.google.pt/books/about/P%C3%B3s_Verdade.html?id=DEL5zwEACAAJ&source=kp_book_description&redir_esc=y",
-                icon: "📚"
-            },
-            {
-                title: "Manual de Combate à Desinformação",
-                category: "reading",
-                type: "Guia",
-                year: "UNESCO, 2020",
-                description: "Guia prático com estratégias para identificar e combater fake news no dia a dia.",
-                link: "https://unesdoc.unesco.org/ark:/48223/pf0000374219",
-                icon: "📖"
-            },
-            {
-                title: "A Psicologia das Fake News",
-                category: "reading",
-                type: "Artigo",
-                year: "Scientific American",
-                description: "Explicação sobre os mecanismos psicológicos que nos fazem acreditar e compartilhar informações falsas.",
-                link: "https://www.scientificamerican.com/article/the-psychology-of-fake-news/",
-                icon: "📄"
-            },
-            // Vídeos
-            {
-                title: "Como as Fake News se Espalham",
-                category: "video",
-                type: "TED Talk",
-                year: "14:22 min",
-                description: "Explicação sobre os mecanismos psicológicos e tecnológicos que fazem as notícias falsas se viralizarem.",
-                link: "https://www.youtube.com/watch?v=cSKGa_7XJkg",
-                icon: "🎥"
-            },
-            {
-                title: "Como Encontrar a Verdade na Era da Desinformação",
-                category: "video",
-                type: "TED Talk",
-                year: "16:45 min",
-                description: "Estratégias para desenvolver pensamento crítico e identificar informações falsas na internet.",
-                link: "https://www.youtube.com/watch?v=hz6GULbowAk",
-                icon: "🎥"
-            },
-            {
-                title: "A Ciência por Trás das Fake News",
-                category: "video",
-                type: "Documentário",
-                year: "22:10 min",
-                description: "Análise científica sobre por que nosso cérebro é vulnerável a informações falsas e como nos proteger.",
-                link: "https://www.youtube.com/watch?v=dNmwvntMF5A",
-                icon: "🎥"
-            },
-            {
-                title: "Fake News - Porta dos Fundos",
-                category: "video",
-                type: "Humor",
-                year: "5:32 min",
-                description: "Esquete humorística que mostra como as fake news podem distorcer completamente a realidade.",
-                link: "https://www.youtube.com/watch?v=NM9wDPYWKcA",
-                icon: "🎥"
-            },
-            {
-                title: "Curso BBC sobre Fake News",
-                category: "video",
-                type: "Série Educativa",
-                year: "6 episódios",
-                description: "Curso completo que ensina a identificar notícias falsas e verificar informações online.",
-                link: "https://www.youtube.com/watch?v=BEbQTZLXwOM&list=PLcetZ6gSk96-CsAaVjeePA7EZ8MD56rg-",
-                icon: "🎥"
-            },
-            {
-                title: "O Impacto das Fake News na Democracia",
-                category: "video",
-                type: "Documentário",
-                year: "28:15 min",
-                description: "Análise aprofundada sobre como a desinformação pode afetar processos democráticos e eleições.",
-                link: "https://www.youtube.com/watch?v=tCs5_pBXzgI",
-                icon: "🎥"
-            },
-            {
-                title: "Por Que Acreditamos em Fake News?",
-                category: "video",
-                type: "Nerdologia",
-                year: "10:45 min",
-                description: "Explicação científica sobre os vieses cognitivos que nos fazem acreditar em informações falsas.",
-                link: "https://www.youtube.com/watch?v=zp5QehSFqLM",
-                icon: "🎥"
-            },
-            {
-                title: "A História das Fake News",
-                category: "video",
-                type: "Nerdologia",
-                year: "11:30 min",
-                description: "Mostra que a desinformação não é um fenômeno novo, mas sim uma prática antiga com novas roupagens.",
-                link: "https://www.youtube.com/watch?v=NeBfq5nEWxA",
-                icon: "🎥"
-            },
-            {
-                title: "Como as Redes Sociais Amplificam Fake News",
-                category: "video",
-                type: "Nerdologia",
-                year: "9:52 min",
-                description: "Análise dos algoritmos que priorizam conteúdo polêmico e como isso favorece a desinformação.",
-                link: "https://www.youtube.com/watch?v=8quTOBvb8uA",
-                icon: "🎥"
-            },
-            {
-                title: "Como Combater Fake News",
-                category: "video",
-                type: "Nerdologia",
-                year: "12:18 min",
-                description: "Estratégias eficazes para identificar e combater a desinformação no dia a dia.",
-                link: "https://www.youtube.com/watch?v=I49bImxBRAE",
-                icon: "🎥"
-            }
-        ];
+            <!-- Paginação -->
+            <div class="pagination" id="pagination-container">
+                <button class="page-btn" id="prev-btn" disabled>Anterior</button>
+                <span id="page-info">Página 1</span>
+                <button class="page-btn" id="next-btn">Próxima</button>
+            </div>
 
-        // Variáveis de paginação
-        let currentPage = 1;
-        const itemsPerPage = 9;
-        let currentFilter = "all";
-        let filteredReferences = [];
 
-        // Elementos DOM
-        const referenceContainer = document.getElementById('reference-container');
-        const paginationContainer = document.getElementById('pagination-container');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const pageInfo = document.getElementById('page-info');
-        const filterBtns = document.querySelectorAll('.filter-btn');
+            <!-- Seção de Sugestões -->
+            <section class="suggestions">
+                <div class="suggestions-content">
+                    <h2>Sugira Referências</h2>
+                    <p>Conhece algum conteúdo relevante que deveria estar nesta lista? Envie sua sugestão!</p>
+                    <form class="suggestions-form">
+                        <input type="text" placeholder="Seu nome (opcional)">
+                        <input type="email" placeholder="Seu e-mail (opcional)">
+                        <input type="text" placeholder="Título da referência" required>
+                        <input type="text" placeholder="Tipo (livro, artigo, vídeo, etc.)" required>
+                        <input type="url" placeholder="Link (se disponível)">
+                        <textarea placeholder="Por que você recomenda este conteúdo?" required></textarea>
+                        <button type="submit">Enviar Sugestão</button>
+                    </form>
+                </div>
+            </section>
 
-        // Inicialização
-        function init() {
-            filteredReferences = [...references];
-            renderReferences();
-            setupEventListeners();
-        }
 
-        // Configura os event listeners
-        function setupEventListeners() {
-            // Filtros
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    currentFilter = btn.dataset.filter;
-                    currentPage = 1; // Reset para a primeira página
-                    
-                    // Filtra as referências
-                    if (currentFilter === 'all') {
-                        filteredReferences = [...references];
-                    } else {
-                        filteredReferences = references.filter(ref => ref.category === currentFilter);
+
+            <script>
+                // Dados das referências
+                const references = [
+                    // Leituras
+                    {
+                        title: "Educação em Ciências e Fake News",
+                        category: "reading",
+                        type: "Artigo Acadêmico",
+                        year: "ENPEC, 2021",
+                        description: "Análise de como a falta de educação científica facilita a disseminação de desinformação, com foco em letramento midiático e políticas públicas.",
+                        link: "https://www.editorarealize.com.br/editora/anais/enpec/2021/TRABALHO_COMPLETO_EV155_MD1_SA108_ID1340_29062021204056.pdf",
+                        icon: "📄"
+                    },
+                    {
+                        title: "Fake News: Uma Revisão Interdisciplinar",
+                        category: "reading",
+                        type: "Artigo",
+                        year: "Brajets",
+                        description: "Revisão ampla sobre deepfakes, IA geradora de texto e impactos psicológicos na propagação de desinformação.",
+                        link: "https://brajets.com/brajets/article/view/790/429",
+                        icon: "📄"
+                    },
+                    {
+                        title: "Fake News e a Banalidade do Mal",
+                        category: "reading",
+                        type: "Artigo",
+                        year: "FINOM",
+                        description: "Análise do excesso de informação na era digital e sua relação com a teoria da 'banalidade do mal' de Hannah Arendt.",
+                        link: "https://revistas.icesp.br/index.php/FINOM_Humanidade_Tecnologia/article/view/1709/1268",
+                        icon: "📄"
+                    },
+                    {
+                        title: "Information Disorder",
+                        category: "reading",
+                        type: "Relatório",
+                        year: "Conselho da Europa, 2017",
+                        description: "Framework para classificar desinformação em mis-information, dis-information e mal-information, com diretrizes para políticas públicas.",
+                        link: "https://edoc.coe.int/en/media/11609-desordem-informacional-para-um-quadro-interdisciplinar-de-investigacao-e-elaboracao-de-politicas-publicas.html",
+                        icon: "📊"
+                    },
+                    {
+                        title: "A Fábrica de Mentiras",
+                        category: "reading",
+                        type: "Livro",
+                        year: "Bernardo Pires",
+                        description: "Investigação sobre a indústria da desinformação, com casos reais de fake news que impactaram a política global.",
+                        link: "https://www.wook.pt/livro/fabrica-de-mentiras-paulo-pena/23507165?srsltid=AfmBOooeX_bSNqbEQWjxAfmAzs7ETBML7NzR19EP7ZWCRunjOKjzlwdO",
+                        icon: "📚"
+                    },
+                    {
+                        title: "The Misinformation Age",
+                        category: "reading",
+                        type: "Livro",
+                        year: "Cailin O'Connor",
+                        description: "Como as falsas crenças se espalham, explorando vieses cognitivos e dinâmicas sociais por trás das fake news.",
+                        link: "https://www.amazon.com/Misinformation-Age-False-Beliefs-Spread/dp/0300234015",
+                        icon: "📚"
+                    },
+                    {
+                        title: "Pós-Verdade",
+                        category: "reading",
+                        type: "Livro",
+                        year: "Matthew d'Ancona",
+                        description: "Análise sobre como a emoção se tornou mais importante que os fatos na política contemporânea.",
+                        link: "https://books.google.pt/books/about/P%C3%B3s_Verdade.html?id=DEL5zwEACAAJ&source=kp_book_description&redir_esc=y",
+                        icon: "📚"
+                    },
+                    {
+                        title: "Manual de Combate à Desinformação",
+                        category: "reading",
+                        type: "Guia",
+                        year: "UNESCO, 2020",
+                        description: "Guia prático com estratégias para identificar e combater fake news no dia a dia.",
+                        link: "https://unesdoc.unesco.org/ark:/48223/pf0000374219",
+                        icon: "📖"
+                    },
+                    {
+                        title: "A Psicologia das Fake News",
+                        category: "reading",
+                        type: "Artigo",
+                        year: "Scientific American",
+                        description: "Explicação sobre os mecanismos psicológicos que nos fazem acreditar e compartilhar informações falsas.",
+                        link: "https://www.scientificamerican.com/article/the-psychology-of-fake-news/",
+                        icon: "📄"
+                    },
+                    // Vídeos
+                    {
+                        title: "Como as Fake News se Espalham",
+                        category: "video",
+                        type: "TED Talk",
+                        year: "14:22 min",
+                        description: "Explicação sobre os mecanismos psicológicos e tecnológicos que fazem as notícias falsas se viralizarem.",
+                        link: "https://www.youtube.com/watch?v=cSKGa_7XJkg",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "Como Encontrar a Verdade na Era da Desinformação",
+                        category: "video",
+                        type: "TED Talk",
+                        year: "16:45 min",
+                        description: "Estratégias para desenvolver pensamento crítico e identificar informações falsas na internet.",
+                        link: "https://www.youtube.com/watch?v=hz6GULbowAk",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "A Ciência por Trás das Fake News",
+                        category: "video",
+                        type: "Documentário",
+                        year: "22:10 min",
+                        description: "Análise científica sobre por que nosso cérebro é vulnerável a informações falsas e como nos proteger.",
+                        link: "https://www.youtube.com/watch?v=dNmwvntMF5A",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "Fake News - Porta dos Fundos",
+                        category: "video",
+                        type: "Humor",
+                        year: "5:32 min",
+                        description: "Esquete humorística que mostra como as fake news podem distorcer completamente a realidade.",
+                        link: "https://www.youtube.com/watch?v=NM9wDPYWKcA",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "Curso BBC sobre Fake News",
+                        category: "video",
+                        type: "Série Educativa",
+                        year: "6 episódios",
+                        description: "Curso completo que ensina a identificar notícias falsas e verificar informações online.",
+                        link: "https://www.youtube.com/watch?v=BEbQTZLXwOM&list=PLcetZ6gSk96-CsAaVjeePA7EZ8MD56rg-",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "O Impacto das Fake News na Democracia",
+                        category: "video",
+                        type: "Documentário",
+                        year: "28:15 min",
+                        description: "Análise aprofundada sobre como a desinformação pode afetar processos democráticos e eleições.",
+                        link: "https://www.youtube.com/watch?v=tCs5_pBXzgI",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "Por Que Acreditamos em Fake News?",
+                        category: "video",
+                        type: "Nerdologia",
+                        year: "10:45 min",
+                        description: "Explicação científica sobre os vieses cognitivos que nos fazem acreditar em informações falsas.",
+                        link: "https://www.youtube.com/watch?v=zp5QehSFqLM",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "A História das Fake News",
+                        category: "video",
+                        type: "Nerdologia",
+                        year: "11:30 min",
+                        description: "Mostra que a desinformação não é um fenômeno novo, mas sim uma prática antiga com novas roupagens.",
+                        link: "https://www.youtube.com/watch?v=NeBfq5nEWxA",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "Como as Redes Sociais Amplificam Fake News",
+                        category: "video",
+                        type: "Nerdologia",
+                        year: "9:52 min",
+                        description: "Análise dos algoritmos que priorizam conteúdo polêmico e como isso favorece a desinformação.",
+                        link: "https://www.youtube.com/watch?v=8quTOBvb8uA",
+                        icon: "🎥"
+                    },
+                    {
+                        title: "Como Combater Fake News",
+                        category: "video",
+                        type: "Nerdologia",
+                        year: "12:18 min",
+                        description: "Estratégias eficazes para identificar e combater a desinformação no dia a dia.",
+                        link: "https://www.youtube.com/watch?v=I49bImxBRAE",
+                        icon: "🎥"
                     }
-                    
-                    renderReferences();
-                });
-            });
-            
-            // Paginação
-            prevBtn.addEventListener('click', () => {
-                if (currentPage > 1) {
-                    currentPage--;
-                    renderReferences();
-                }
-            });
-            
-            nextBtn.addEventListener('click', () => {
-                const totalPages = Math.ceil(filteredReferences.length / itemsPerPage);
-                if (currentPage < totalPages) {
-                    currentPage++;
-                    renderReferences();
-                }
-            });
-        }
+                ];
 
-        // Renderiza as referências na página atual
-        function renderReferences() {
-            // Calcula os itens para a página atual
-            const startIndex = (currentPage - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const pageItems = filteredReferences.slice(startIndex, endIndex);
-            
-            // Limpa o container
-            referenceContainer.innerHTML = '';
-            
-            // Adiciona os itens da página atual
-            pageItems.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'reference-card';
-                card.dataset.category = item.category;
-                
-                card.innerHTML = `
+                // Variáveis de paginação
+                let currentPage = 1;
+                const itemsPerPage = 9;
+                let currentFilter = "all";
+                let filteredReferences = [];
+
+                // Elementos DOM
+                const referenceContainer = document.getElementById('reference-container');
+                const paginationContainer = document.getElementById('pagination-container');
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                const pageInfo = document.getElementById('page-info');
+                const filterBtns = document.querySelectorAll('.filter-btn');
+
+                // Inicialização
+                function init() {
+                    filteredReferences = [...references];
+                    renderReferences();
+                    setupEventListeners();
+                }
+
+                // Configura os event listeners
+                function setupEventListeners() {
+                    // Filtros
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            filterBtns.forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+
+                            currentFilter = btn.dataset.filter;
+                            currentPage = 1; // Reset para a primeira página
+
+                            // Filtra as referências
+                            if (currentFilter === 'all') {
+                                filteredReferences = [...references];
+                            } else {
+                                filteredReferences = references.filter(ref => ref.category === currentFilter);
+                            }
+
+                            renderReferences();
+                        });
+                    });
+
+                    // Paginação
+                    prevBtn.addEventListener('click', () => {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            renderReferences();
+                        }
+                    });
+
+                    nextBtn.addEventListener('click', () => {
+                        const totalPages = Math.ceil(filteredReferences.length / itemsPerPage);
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            renderReferences();
+                        }
+                    });
+                }
+
+                // Renderiza as referências na página atual
+                function renderReferences() {
+                    // Calcula os itens para a página atual
+                    const startIndex = (currentPage - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+                    const pageItems = filteredReferences.slice(startIndex, endIndex);
+
+                    // Limpa o container
+                    referenceContainer.innerHTML = '';
+
+                    // Adiciona os itens da página atual
+                    pageItems.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'reference-card';
+                        card.dataset.category = item.category;
+
+                        card.innerHTML = `
                     <div class="reference-icon">${item.icon}</div>
                     <h3>${item.title}</h3>
                     <div class="reference-meta">
@@ -706,36 +744,57 @@
                     <p>${item.description}</p>
                     <a href="${item.link}" target="_blank" class="btn">${item.category === 'reading' ? 'Acessar' : 'Assistir'}</a>
                 `;
-                
-                referenceContainer.appendChild(card);
-            });
-            
-            // Atualiza a paginação
-            updatePagination();
-        }
 
-        // Atualiza os controles de paginação
-        function updatePagination() {
-            const totalItems = filteredReferences.length;
-            const totalPages = Math.ceil(totalItems / itemsPerPage);
-            
-            // Atualiza o texto da página
-            pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
-            
-            // Habilita/desabilita botões
-            prevBtn.disabled = currentPage === 1;
-            nextBtn.disabled = currentPage === totalPages;
-            
-            // Mostra/oculta a paginação se necessário
-            if (totalPages <= 1) {
-                paginationContainer.style.display = 'none';
-            } else {
-                paginationContainer.style.display = 'flex';
-            }
-        }
+                        referenceContainer.appendChild(card);
+                    });
 
-        // Inicia a aplicação
-        init();
-    </script>
+                    // Atualiza a paginação
+                    updatePagination();
+                }
+
+                // Atualiza os controles de paginação
+                function updatePagination() {
+                    const totalItems = filteredReferences.length;
+                    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+                    // Atualiza o texto da página
+                    pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
+
+                    // Habilita/desabilita botões
+                    prevBtn.disabled = currentPage === 1;
+                    nextBtn.disabled = currentPage === totalPages;
+
+                    // Mostra/oculta a paginação se necessário
+                    if (totalPages <= 1) {
+                        paginationContainer.style.display = 'none';
+                    } else {
+                        paginationContainer.style.display = 'flex';
+                    }
+                }
+
+                // Inicia a aplicação
+                init();
+            </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Olhar Crítico. <a href="../index.html">Voltar ao início</a></p>
+        </div>
+    </footer>
+
+    <!-- Back Button -->
+    <a href="../pages/acervo/index.html" class="back-button" title="Voltar">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
+
 </html>

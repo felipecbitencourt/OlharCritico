@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conquistas da Revolução</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Conquistas da Revolução | Olhar Crítico</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@700&family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
   <style>
     :root {
       --vermelho: #cc0000;
@@ -31,8 +37,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .section {
@@ -149,62 +162,106 @@
     }
   </style>
 </head>
+
 <body>
-  <section class="section">
-    <h2 class="section-title">Conquistas da Revolução</h2>
-    <div class="conquistas-grid">
-      <div class="conquista-card">
-        <div class="conquista-icon">🌸</div>
-        <h3>Liberdades Democráticas</h3>
-        <p>Fim da censura, legalização dos partidos políticos, eleições livres e liberdade de expressão.</p>
-      </div>
-
-      <div class="conquista-card">
-        <div class="conquista-icon">🌸</div>
-        <h3>Descolonização</h3>
-        <p>Independência das colônias portuguesas em África (Angola, Moçambique, Guiné-Bissau, Cabo Verde e São Tomé e Príncipe).</p>
-      </div>
-
-      <div class="conquista-card">
-        <div class="conquista-icon">🌸</div>
-        <h3>Reforma Agrária</h3>
-        <p>Ocupação de latifúndios no Alentejo e criação de cooperativas agrícolas.</p>
-      </div>
-
-      <div class="conquista-card">
-        <div class="conquista-icon">🌸</div>
-        <h3>Direitos Trabalhistas</h3>
-        <p>Salário mínimo nacional, férias pagas, semana de 40 horas e direito à greve.</p>
-      </div>
-
-      <div class="conquista-card">
-        <div class="conquista-icon">🌸</div>
-        <h3>Educação e Saúde</h3>
-        <p>Expansão do acesso à educação pública e criação do Serviço Nacional de Saúde.</p>
-      </div>
-
-      <div class="conquista-card">
-        <div class="conquista-icon">🌸</div>
-        <h3>Igualdade de Género</h3>
-        <p>Reconhecimento dos direitos das mulheres e igualdade perante a lei.</p>
-      </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="" class="logo-icon">
+        <span>OLHAR CRÍTICO</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="../pages/o-que-e-fake/index.html" class="nav-link">O que é Fake</a>
+        <a href="../pages/dados/index.html" class="nav-link">Dados</a>
+        <a href="../pages/verificacao/index.html" class="nav-link">Verificação</a>
+        <a href="../pages/caca-fakes/index.html" class="nav-link">Caça-Fakes</a>
+        <a href="../pages/portugal/index.html" class="nav-link active">Portugal</a>
+        <a href="../pages/acervo/index.html" class="nav-link">Acervo</a>
+        <a href="../pages/sobre/index.html" class="nav-link">Sobre</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
     </div>
-  </section>
+  </header>
 
-  <script>
-    // Ativar animação ao scroll
-    function revelarConquistas() {
-      const cards = document.querySelectorAll('.conquista-card');
-      cards.forEach(card => {
-        const top = card.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          card.classList.add('visible');
-        }
-      });
-    }
+  <main>
+    <section class="section">
+      <h2 class="section-title">Conquistas da Revolução</h2>
+      <div class="conquistas-grid">
+        <div class="conquista-card">
+          <div class="conquista-icon">🌸</div>
+          <h3>Liberdades Democráticas</h3>
+          <p>Fim da censura, legalização dos partidos políticos, eleições livres e liberdade de expressão.</p>
+        </div>
 
-    window.addEventListener('scroll', revelarConquistas);
-    window.addEventListener('load', revelarConquistas);
-  </script>
+        <div class="conquista-card">
+          <div class="conquista-icon">🌸</div>
+          <h3>Descolonização</h3>
+          <p>Independência das colônias portuguesas em África (Angola, Moçambique, Guiné-Bissau, Cabo Verde e São Tomé e
+            Príncipe).</p>
+        </div>
+
+        <div class="conquista-card">
+          <div class="conquista-icon">🌸</div>
+          <h3>Reforma Agrária</h3>
+          <p>Ocupação de latifúndios no Alentejo e criação de cooperativas agrícolas.</p>
+        </div>
+
+        <div class="conquista-card">
+          <div class="conquista-icon">🌸</div>
+          <h3>Direitos Trabalhistas</h3>
+          <p>Salário mínimo nacional, férias pagas, semana de 40 horas e direito à greve.</p>
+        </div>
+
+        <div class="conquista-card">
+          <div class="conquista-icon">🌸</div>
+          <h3>Educação e Saúde</h3>
+          <p>Expansão do acesso à educação pública e criação do Serviço Nacional de Saúde.</p>
+        </div>
+
+        <div class="conquista-card">
+          <div class="conquista-icon">🌸</div>
+          <h3>Igualdade de Género</h3>
+          <p>Reconhecimento dos direitos das mulheres e igualdade perante a lei.</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Ativar animação ao scroll
+      function revelarConquistas() {
+        const cards = document.querySelectorAll('.conquista-card');
+        cards.forEach(card => {
+          const top = card.getBoundingClientRect().top;
+          if (top < window.innerHeight - 100) {
+            card.classList.add('visible');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', revelarConquistas);
+      window.addEventListener('load', revelarConquistas);
+    </script>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2024 Olhar Crítico. <a href="../index.html">Voltar ao início</a></p>
+    </div>
+  </footer>
+
+  <!-- Back Button -->
+  <a href="../pages/portugal/index.html" class="back-button" title="Voltar">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="../js/main.js"></script>
 </body>
+
 </html>

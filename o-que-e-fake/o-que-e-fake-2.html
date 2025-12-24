@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7 Categorias da Desordem Informacional</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>7 Categorias da Desordem Informacional | Olhar Crítico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/utilities.css">
   <style>
     :root {
       --vermelho: #cc0000;
@@ -53,15 +57,20 @@
       left: 0;
       right: 0;
       height: 5px;
-      background: linear-gradient(90deg, 
-        #cc0000, #ff3333, #ff6666, #ff3333, #cc0000);
+      background: linear-gradient(90deg,
+          #cc0000, #ff3333, #ff6666, #ff3333, #cc0000);
       animation: rainbow 8s linear infinite;
       background-size: 400% 100%;
     }
 
     @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 100% 50%;
+      }
     }
 
     .header-title {
@@ -185,7 +194,7 @@
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
-      
+
       .grid .card:last-child {
         max-width: 100%;
       }
@@ -195,20 +204,20 @@
       .header-container {
         padding: 3rem 1.5rem 2.5rem;
       }
-      
+
       .grid-container {
         padding: 0 1.5rem 4rem;
       }
-      
+
       .card {
         padding: 25px;
         min-height: auto;
       }
-      
+
       .card h3 {
         font-size: 1.3rem;
       }
-      
+
       .card p {
         font-size: 1rem;
       }
@@ -220,6 +229,7 @@
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -231,13 +241,33 @@
       animation: fadeInUp 0.6s ease forwards;
     }
 
-    .card:nth-child(1) { animation-delay: 0.1s; }
-    .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.3s; }
-    .card:nth-child(4) { animation-delay: 0.4s; }
-    .card:nth-child(5) { animation-delay: 0.5s; }
-    .card:nth-child(6) { animation-delay: 0.6s; }
-    .card:nth-child(7) { animation-delay: 0.7s; }
+    .card:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .card:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .card:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .card:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    .card:nth-child(7) {
+      animation-delay: 0.7s;
+    }
 
     /* Footer */
     .footer {
@@ -250,54 +280,102 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="" class="logo-icon">
+        <span>OLHAR CRÍTICO</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="../pages/o-que-e-fake/index.html" class="nav-link active">O que é Fake</a>
+        <a href="../pages/dados/index.html" class="nav-link">Dados</a>
+        <a href="../pages/verificacao/index.html" class="nav-link">Verificação</a>
+        <a href="../pages/caca-fakes/index.html" class="nav-link">Caça-Fakes</a>
+        <a href="../pages/portugal/index.html" class="nav-link">Portugal</a>
+        <a href="../pages/acervo/index.html" class="nav-link">Acervo</a>
+        <a href="../pages/sobre/index.html" class="nav-link">Sobre</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
 
-  <div class="header-container">
-    <h1 class="header-title">7 CATEGORIAS DA DESORDEM INFORMACIONAL</h1>
-    <p class="header-subtitle">Classificação dos principais tipos de desinformação e conteúdo enganoso na era digital</p>
-  </div>
+  <main>
 
-  <div class="grid-container">
-    <div class="grid">
-      <div class="card">
-        <span class="card-number">1</span>
-        <h3><span class="card-icon">🃏</span> Sátira ou Paródia</h3>
-        <p>Conteúdo humorístico sem intenção de causar danos, mas com potencial para enganar quando retirado do contexto original ou compartilhado como se fosse verdadeiro.</p>
-      </div>
-      <div class="card">
-        <span class="card-number">2</span>
-        <h3><span class="card-icon">📢</span> Conteúdo Tendencioso</h3>
-        <p>Uso seletivo e enganoso de informações para moldar a percepção sobre um problema ou indivíduo, distorcendo a realidade através de omissões ou ênfase desproporcional.</p>
-      </div>
-      <div class="card">
-        <span class="card-number">3</span>
-        <h3><span class="card-icon">🎭</span> Conteúdo Impostor</h3>
-        <p>Quando fontes genuínas são personificadas ou substituídas por fontes falsas com intuito deliberado de enganar, usando identidades ou marcas reconhecíveis.</p>
-      </div>
-      <div class="card">
-        <span class="card-number">4</span>
-        <h3><span class="card-icon">🚨</span> Conteúdo Fabricado</h3>
-        <p>Novo conteúdo 100% falso, projetado deliberadamente para enganar e causar danos, frequentemente criado para manipulação política ou ganho financeiro.</p>
-      </div>
-      <div class="card">
-        <span class="card-number">5</span>
-        <h3><span class="card-icon">🔗</span> Conexão Falsa</h3>
-        <p>Títulos, recursos visuais ou legendas que não correspondem ao conteúdo real, criando uma narrativa enganosa através da associação incorreta de elementos.</p>
-      </div>
-      <div class="card">
-        <span class="card-number">6</span>
-        <h3><span class="card-icon">📌</span> Contexto Falso</h3>
-        <p>Conteúdo genuíno compartilhado com informações contextuais falsas que alteram radicalmente seu significado original, incluindo datas, locais ou circunstâncias.</p>
-      </div>
-      <div class="card">
-        <span class="card-number">7</span>
-        <h3><span class="card-icon">🛠</span> Conteúdo Manipulado</h3>
-        <p>Informações ou imagens genuínas que foram alteradas ou editadas de forma enganosa, incluindo deepfakes, edições de áudio/vídeo e manipulações fotográficas sofisticadas.</p>
+    <div class="header-container">
+      <h1 class="header-title">7 CATEGORIAS DA DESORDEM INFORMACIONAL</h1>
+      <p class="header-subtitle">Classificação dos principais tipos de desinformação e conteúdo enganoso na era digital
+      </p>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid">
+        <div class="card">
+          <span class="card-number">1</span>
+          <h3><span class="card-icon">🃏</span> Sátira ou Paródia</h3>
+          <p>Conteúdo humorístico sem intenção de causar danos, mas com potencial para enganar quando retirado do
+            contexto original ou compartilhado como se fosse verdadeiro.</p>
+        </div>
+        <div class="card">
+          <span class="card-number">2</span>
+          <h3><span class="card-icon">📢</span> Conteúdo Tendencioso</h3>
+          <p>Uso seletivo e enganoso de informações para moldar a percepção sobre um problema ou indivíduo, distorcendo
+            a realidade através de omissões ou ênfase desproporcional.</p>
+        </div>
+        <div class="card">
+          <span class="card-number">3</span>
+          <h3><span class="card-icon">🎭</span> Conteúdo Impostor</h3>
+          <p>Quando fontes genuínas são personificadas ou substituídas por fontes falsas com intuito deliberado de
+            enganar, usando identidades ou marcas reconhecíveis.</p>
+        </div>
+        <div class="card">
+          <span class="card-number">4</span>
+          <h3><span class="card-icon">🚨</span> Conteúdo Fabricado</h3>
+          <p>Novo conteúdo 100% falso, projetado deliberadamente para enganar e causar danos, frequentemente criado para
+            manipulação política ou ganho financeiro.</p>
+        </div>
+        <div class="card">
+          <span class="card-number">5</span>
+          <h3><span class="card-icon">🔗</span> Conexão Falsa</h3>
+          <p>Títulos, recursos visuais ou legendas que não correspondem ao conteúdo real, criando uma narrativa enganosa
+            através da associação incorreta de elementos.</p>
+        </div>
+        <div class="card">
+          <span class="card-number">6</span>
+          <h3><span class="card-icon">📌</span> Contexto Falso</h3>
+          <p>Conteúdo genuíno compartilhado com informações contextuais falsas que alteram radicalmente seu significado
+            original, incluindo datas, locais ou circunstâncias.</p>
+        </div>
+        <div class="card">
+          <span class="card-number">7</span>
+          <h3><span class="card-icon">🛠</span> Conteúdo Manipulado</h3>
+          <p>Informações ou imagens genuínas que foram alteradas ou editadas de forma enganosa, incluindo deepfakes,
+            edições de áudio/vídeo e manipulações fotográficas sofisticadas.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
- 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2024 Olhar Crítico. <a href="../index.html">Voltar ao início</a></p>
+    </div>
+  </footer>
 
+  <!-- Back Button -->
+  <a href="../pages/o-que-e-fake/index.html" class="back-button" title="Voltar">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="../js/main.js"></script>
 </body>
+
 </html>

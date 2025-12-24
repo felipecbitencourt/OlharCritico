@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como a Desinformação Funciona</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Como a Desinformação Funciona | Olhar Crítico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
     <style>
         :root {
             --primary: #ff4757;
@@ -94,51 +100,105 @@
             .types-container {
                 flex-direction: column;
             }
-            
+
             .type-card {
                 min-width: 100%;
             }
-            
+
             h1 {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="disinformation-container">
-        <h1>Como a Desinformação Funciona?</h1>
-        
-        <img src="https://static.wixstatic.com/media/73a840_8107270040ba44089fbc834984122fd0~mv2.png" alt="Tipos de desordem informacional" class="disinformation-image">
-        
-        <div class="types-container">
-            <div class="type-card">
-                <h3>Informação Falsa</h3>
-                <p>Conteúdo enganoso ou incorreto compartilhado sem intenção maliciosa, muitas vezes por engano ou falta de verificação.</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="" class="logo-icon">
+                <span>OLHAR CRÍTICO</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="../pages/o-que-e-fake/index.html" class="nav-link active">O que é Fake</a>
+                <a href="../pages/dados/index.html" class="nav-link">Dados</a>
+                <a href="../pages/verificacao/index.html" class="nav-link">Verificação</a>
+                <a href="../pages/caca-fakes/index.html" class="nav-link">Caça-Fakes</a>
+                <a href="../pages/portugal/index.html" class="nav-link">Portugal</a>
+                <a href="../pages/acervo/index.html" class="nav-link">Acervo</a>
+                <a href="../pages/sobre/index.html" class="nav-link">Sobre</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="disinformation-container">
+            <h1>Como a Desinformação Funciona?</h1>
+
+            <img src="https://static.wixstatic.com/media/73a840_8107270040ba44089fbc834984122fd0~mv2.png"
+                alt="Tipos de desordem informacional" class="disinformation-image">
+
+            <div class="types-container">
+                <div class="type-card">
+                    <h3>Informação Falsa</h3>
+                    <p>Conteúdo enganoso ou incorreto compartilhado sem intenção maliciosa, muitas vezes por engano ou
+                        falta de verificação.</p>
+                </div>
+
+                <div class="type-card">
+                    <h3>Informação Maliciosa</h3>
+                    <p>Informação verdadeira usada de forma prejudicial, como vazamentos seletivos para causar danos
+                        específicos.</p>
+                </div>
+
+                <div class="type-card">
+                    <h3>Desinformação</h3>
+                    <p>Conteúdo falso criado e disseminado intencionalmente para causar danos ou manipular opiniões.</p>
+                </div>
             </div>
-            
-            <div class="type-card">
-                <h3>Informação Maliciosa</h3>
-                <p>Informação verdadeira usada de forma prejudicial, como vazamentos seletivos para causar danos específicos.</p>
+
+            <div class="content-section">
+                <p>O conceito de <span class="highlight">desinformação</span> pode ser definido como informação que é
+                    falsa e que é compartilhada de forma deliberada com a intenção de causar danos a uma pessoa, grupo
+                    social, organização ou país.</p>
+
+                <p>Este termo, contrastando com a <span class="highlight">informação falsa</span> que é compartilhada
+                    sem a intenção de causar dano, enfatiza tanto a falsidade do conteúdo quanto a motivação maliciosa
+                    por trás de sua disseminação.</p>
+
+                <p>A desinformação é reconhecida como um dos três tipos principais de <span class="highlight">desordem
+                        informacional</span>, junto com a informação falsa e a informação maliciosa, formando um
+                    ecossistema complexo que desafia a qualidade da informação pública.</p>
             </div>
-            
-            <div class="type-card">
-                <h3>Desinformação</h3>
-                <p>Conteúdo falso criado e disseminado intencionalmente para causar danos ou manipular opiniões.</p>
+
+            <div class="content-section">
+                <p><strong>Como se proteger:</strong> Verifique sempre a fonte da informação, procure confirmação em
+                    veículos confiáveis, analise o contexto e esteja atento a conteúdos emocionalmente manipulativos ou
+                    que promovem divisões sociais.</p>
             </div>
         </div>
-        
-        <div class="content-section">
-            <p>O conceito de <span class="highlight">desinformação</span> pode ser definido como informação que é falsa e que é compartilhada de forma deliberada com a intenção de causar danos a uma pessoa, grupo social, organização ou país.</p>
-            
-            <p>Este termo, contrastando com a <span class="highlight">informação falsa</span> que é compartilhada sem a intenção de causar dano, enfatiza tanto a falsidade do conteúdo quanto a motivação maliciosa por trás de sua disseminação.</p>
-            
-            <p>A desinformação é reconhecida como um dos três tipos principais de <span class="highlight">desordem informacional</span>, junto com a informação falsa e a informação maliciosa, formando um ecossistema complexo que desafia a qualidade da informação pública.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Olhar Crítico. <a href="../index.html">Voltar ao início</a></p>
         </div>
-        
-        <div class="content-section">
-            <p><strong>Como se proteger:</strong> Verifique sempre a fonte da informação, procure confirmação em veículos confiáveis, analise o contexto e esteja atento a conteúdos emocionalmente manipulativos ou que promovem divisões sociais.</p>
-        </div>
-    </div>
+    </footer>
+
+    <!-- Back Button -->
+    <a href="../pages/o-que-e-fake/index.html" class="back-button" title="Voltar">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
+
 </html>

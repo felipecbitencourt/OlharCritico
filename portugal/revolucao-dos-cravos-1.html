@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>A Revolução dos Cravos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Revolução dos Cravos | Olhar Crítico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utilities.css">
     <style>
         :root {
             --vermelho: #cc0000;
@@ -33,20 +39,35 @@
 
         /* ANIMAÇÕES OTIMIZADAS */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes pulse {
-            0% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.1); }
-            100% { transform: translateX(-50%) scale(1); }
+            0% {
+                transform: translateX(-50%) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1.1);
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
         }
 
         /* CABEÇALHO HERO - MOBILE FIRST */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://static.wixstatic.com/media/73a840_8534bd43470b47489a7a12eef3cd29c0~mv2.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://static.wixstatic.com/media/73a840_8534bd43470b47489a7a12eef3cd29c0~mv2.jpg');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -151,23 +172,23 @@
             .hero h1 {
                 font-size: 3rem;
             }
-            
+
             .tagline {
                 font-size: 1.3rem;
                 margin-bottom: 2rem;
             }
-            
+
             .periodo {
                 font-size: 1rem;
                 padding: 0.7rem 1.8rem;
             }
-            
+
             .nav-buttons {
                 flex-direction: row;
                 flex-wrap: wrap;
                 max-width: 500px;
             }
-            
+
             .nav-button {
                 width: auto;
                 padding: 0.7rem 1.5rem;
@@ -180,29 +201,29 @@
                 margin-bottom: 1.5rem;
                 letter-spacing: 2px;
             }
-            
+
             .tagline {
                 font-size: 1.6rem;
                 max-width: 800px;
                 margin-bottom: 3rem;
             }
-            
+
             .periodo {
                 font-size: 1.2rem;
                 padding: 0.8rem 2rem;
                 margin-top: 1rem;
             }
-            
+
             .nav-buttons {
                 gap: 1.5rem;
                 margin-top: 2rem;
             }
-            
+
             .nav-button {
                 font-size: 1rem;
                 padding: 0.8rem 1.8rem;
             }
-            
+
             .scroll-down {
                 font-size: 2rem;
                 bottom: 2rem;
@@ -216,17 +237,60 @@
         }
     </style>
 </head>
+
 <body>
-    <section class="hero">
-        <h1>A Revolução dos Cravos <span>🌸</span></h1>
-        <p class="tagline">O movimento que restaurou a democracia em Portugal</p>
-        <div class="periodo">25 de Abril de 1974 • Dia da Liberdade</div>
-        
-       
-        
-        <a href="#content" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="" class="logo-icon">
+                <span>OLHAR CRÍTICO</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="../pages/o-que-e-fake/index.html" class="nav-link">O que é Fake</a>
+                <a href="../pages/dados/index.html" class="nav-link">Dados</a>
+                <a href="../pages/verificacao/index.html" class="nav-link">Verificação</a>
+                <a href="../pages/caca-fakes/index.html" class="nav-link">Caça-Fakes</a>
+                <a href="../pages/portugal/index.html" class="nav-link active">Portugal</a>
+                <a href="../pages/acervo/index.html" class="nav-link">Acervo</a>
+                <a href="../pages/sobre/index.html" class="nav-link">Sobre</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>A Revolução dos Cravos <span>🌸</span></h1>
+            <p class="tagline">O movimento que restaurou a democracia em Portugal</p>
+            <div class="periodo">25 de Abril de 1974 • Dia da Liberdade</div>
+
+
+
+            <a href="#content" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Olhar Crítico. <a href="../index.html">Voltar ao início</a></p>
+        </div>
+    </footer>
+
+    <!-- Back Button -->
+    <a href="../pages/portugal/index.html" class="back-button" title="Voltar">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
+
 </html>
